@@ -38,7 +38,7 @@ module.exports = {
             console.log(error.config);
         });
 
-        if(response && response.data.nome){
+        if(response && response.data.name){
             const { name, bio, avatar_url: avatar } = response.data;
 
             const dev = await Dev.create({ 
