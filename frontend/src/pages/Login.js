@@ -13,15 +13,29 @@ export default function Login({ history }) {
 
         const response = await api.post('/devs', {
             username, 
-        });
+        }).catch(function (error) {
+            if (error.response) {
+              console.log(error.response.data);
+              console.log(error.response.status);
+              console.log(error.response.headers);
+            } else if (error.request) {
 
+              console.log(error.request);
+            } else {
+              console.log('Error', error.message);
+            }
+            console.log(error.config);
+          });
+
+        if(response.data.message){
+            alert(response.data.message);
+            return;
+        }
+        
         const { _id } = response.data;
-
-        console.log(response);
 
         history.push(`/dev/${_id}`)
     }
-
     return  (
         <div className="login-container">
             <form onSubmit={handleSubmit}>
@@ -32,7 +46,6 @@ export default function Login({ history }) {
                     onChange={e => setUsername(e.target.value)}/>
                 <button type="submit">Enviar</button>
             </form>
-            
         </div>
     )
 }
