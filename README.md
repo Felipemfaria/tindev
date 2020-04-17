@@ -63,7 +63,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com), [Node
 $ git clone https://github.com/Felipemfaria/tindev
 
 # Go into the repository
-$ cd instagram-fullStack
+$ cd tindev
 
 # Go into backend
 $ cd backend
@@ -82,34 +82,6 @@ $ yarn install
 
 # Start the backend server
 $ yarn start
-
-# On another terminal, go to the mobile folder
-$ cd ../mobile
-
-# Install dependencies
-$ yarn install
-
-# If you want to run the project on a simulador, start the react-native server as it is
-$ react-native start
-
-# On another terminal, install the app on your simulator
-# Use the command below for iOS devices
-$ react-native run-ios --simulator="iPhone XS Max"
-
-# Use the command below for Android devices
-$ react-native run-android
-
-# If you want to run the project on your smartphone, change the baseURL on src/services/api.js to your machine's ethernet adapter IP. Use the ethernet adapter IP if you're on a cable connection or the WiFi adapter IP if you're on a wireless conecction.
-# After changing the baseURL, start the react-native server
-$ react-native start
-
-# On another terminal, install the app on your smartphone
-# Use the command below for iOS devices
-$ react-native run-ios
-
-# Use the command below for Android devices
-$ react-native run-android
-```
 
 ## :memo: License
 This project is under the MIT license. See the [LICENSE](https://github.com/Felipemfaria/tindev/blob/master/LICENSE) for more information.
